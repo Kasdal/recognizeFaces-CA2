@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stream Source</title>
+        <style>
+            body {
+                background-color: #e0e0e0;
+            }
+            .title {
+                text-align: center;
+                font-size: 32px;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+            .image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .image img {
+                border: 1px solid black;
+            }
+            .fps-counter {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 4px 8px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">Welcome to the Stream</div>
+        <div class="image">
+            <img src="{{ url_for('video_stream') }}" >
+        </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+pip3 install opencv-python
+pip3 install Flask
+pip3 install numpy
+pip3 install socketio
+pip3 install Flask-SocketIO
+pip3 install eventlet
+pip3 install waitress
+pip3 install face_recognition

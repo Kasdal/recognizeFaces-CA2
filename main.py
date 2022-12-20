@@ -139,7 +139,7 @@ def recognise_faces():
 
                     # Draw a rectangle around the face
                     cv2.rectangle(img, (left, top), (right, bottom), (0, 0, 255), 2)
-                    cv2.putText(img, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1, cv2.LINE_AA)
+                    cv2.putText(img, name, (left + 6, bottom - 6), font, 1.0, (0, 0, 255), 1, cv2.LINE_AA)
 
             # Start the face detection and recognition thread
             thread = threading.Thread(target=detect_and_recognize_faces)
@@ -151,7 +151,7 @@ def recognise_faces():
 
 
             # Draw FPS on the frame
-            cv2.putText(img, f'FPS: {fps:.2f}', (10, 30), font, 1, (255, 255, 255), 1, cv2.LINE_AA)
+            cv2.putText(img, f'FPS: {fps:.2f}', (10, 30), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
 
 
             # Display the frame with FPS
@@ -162,7 +162,7 @@ def recognise_faces():
                 frame_count = 0
                 start_time = time.time()
 
-                socketioApp.sleep(0.1)
+                #socketioApp.sleep(0.1)
 
             # Convert the image to JPEG format and send it to the client
             image_encoded = cv2.imencode('.jpg', img)[1]
